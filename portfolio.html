@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Portfolio</title>
+    <link rel="stylesheet" href="portfolio.css" />
+    <link
+      href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <header class="header">
+      <a href="#" class="logo">Tarun.</a>
+      <nav class="navbar">
+        <a href="#" class="active">Home</a>
+        <a href="#">About</a>
+        <a href="#">Contact</a>
+      </nav>
+    </header>
+    <section class="home">
+      <div class="home-content">
+        <h1>Hi, I'm Tarun Saini</h1>
+        <h3>Aspiring Software Developer</h3>
+        <p>
+          Welcome to my digital sanctuary! I'm an aspiring software developer
+          passionate about crafting elegant solutions to real-world challenges.
+          Explore my portfolio to see how I transform ideas into functional code
+          and join me on this journey of continuous learning and innovation.
+        </p>
+        <div class="btn-box">
+          <a href="#">Hire me</a>
+          <a href="#">Let's Talk</a>
+        </div>
+      </div>
+      <div class="home-share">
+        <a href="#"><i class="bx bxl-facebook"></i></a>
+        <a href="https://www.instagram.com/tarun_saini532/"
+          ><i class="bx bxl-instagram"></i
+        ></a>
+        <a href="#"><i class="bx bxl-linkedin"></i></a>
+        <a href="#"><i class="bx bxl-twitter"></i></a>
+        <a href="#"><i class="bx bxl-github"></i></a>
+      </div>
+      <span class="home-imgHover"></span>
+    </section>
+
+    <!-- --------ABOUT--------- -->
+    <div id="about">
+      <div class="container">
+        <div class="row">
+          <div class="about-col1">
+            <img src="portfolio-image/profile1.jpg" />
+          </div>
+          <div class="about-col2">
+            <h1 class="sub-title">About me</h1>
+            <p>
+              I'm an aspiring software developer with a passion for crafting
+              innovative solutions. My journey in coding began with a spark, and
+              I've been fueling it ever since. I'm dedicated to learning,
+              creating, and problem-solving, striving to turn ideas into
+              functional, elegant software. Explore my portfolio to see my
+              journey unfold.
+            </p>
+            <div class="tab-titles">
+              <p class="tab-links active-link" onclick="opentab('skills')">
+                Skills
+              </p>
+              <p class="tab-links" onclick="opentab('education')">Education</p>
+              <p class="tab-links" onclick="opentab('experience')">
+                Experience
+              </p>
+            </div>
+            <div class="tab-content active-tab" id="skills">
+              <ul>
+                <li><span>Languages</span><br />Java, Python</li>
+                <li><span>Web Development</span><br />HTML, CSS, JavaScript</li>
+                <li>
+                  <span>App Development</span><br />Building Android/IOS apps
+                </li>
+              </ul>
+            </div>
+            <div class="tab-content" id="experience">
+              <ul>
+                <li>
+                  <span>2021 - Current</span><br />UI/UX Design Training ET
+                  Institute
+                </li>
+                <li><span>2019 - 2021</span><br />Team lead at Start App</li>
+                <li>
+                  <span>2017 - 2019</span><br />Internship at eKart E-commerce
+                </li>
+              </ul>
+            </div>
+            <div class="tab-content" id="education">
+              <ul>
+                <li><span>2021</span><br />X - 92.5%</li>
+                <li><span>2023</span><br />XII - 80%</li>
+                <li>
+                  <span>2023-27</span><br />Freshman at Chitkara University
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div id="contact">
+      <div class="container">
+        <div class="row">
+          <div class="contact-left">
+            <h1 class="sub-title">Contact Me</h1>
+            <p><i class="bx bx-send"></i> tarunsaini532@gmail.com</p>
+            <p><i class="bx bx-phone"></i> 8968782891</p>
+            <div class="social-icons">
+              <a href="#"><i class="bx bxl-facebook"></i></a>
+              <a href="https://www.instagram.com/tarun_saini532/"
+                ><i class="bx bxl-instagram"></i
+              ></a>
+              <a href="#"><i class="bx bxl-linkedin"></i></a>
+              <a href="#"><i class="bx bxl-twitter"></i></a>
+            </div>
+            <a href="portfolio-image/my-cv.pdf" download class="btn"
+              >Download CV</a
+            >
+          </div>
+          <div class="contact-right">
+            <form action="">
+              <input type="text" name="name" placeholder="Your Name" required />
+              <input
+                type="text"
+                name="email"
+                placeholder="Your Email"
+                required
+              />
+              <textarea
+                name="Message"
+                rows="6"
+                placeholder="Your Message"
+              ></textarea>
+              <button type="submit" class="btn btn2">Submit</button>
+            </form>
+          </div>
+        </div>
+      </div>
+      <div class="copyright">
+        <p>Copyright &copy; Tarun Saini - FEE PROJECT</p>
+      </div>
+    </div>
+
+    <script>
+      var tablinks = document.getElementsByClassName("tab-links");
+      var tablinks = document.getElementsByClassName("tab-content");
+
+      function opentab(tabname) {
+        for (tablink of tablinks) {
+          tablink.classList.remove("active-link");
+        }
+        for (tablink of tablinks) {
+          tablink.classList.remove("active-tab");
+        }
+        event.currentTarget.classList.add("active-link");
+        document.getElementById(tabname).classList.add("active-tab");
+      }
+    </script>
+  </body>
+</html>
